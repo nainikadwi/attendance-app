@@ -15,10 +15,10 @@ The Real-Time Attendance Management System is a web-based application built usin
 
 # Technology Stack:
 
-•	FastAPI: For building the API.
-•	CSV: For storing attendance data.
-•	Pytz: For managing timezone-aware timestamps.
-•	Logging: For error tracking.
+1.	FastAPI: For building the API.
+2.	CSV: For storing attendance data.
+3. Pytz: For managing timezone-aware timestamps.
+4.	Logging: For error tracking.
 
 # How It Works:
 
@@ -32,10 +32,10 @@ Timestamp, Employee_ID, Name, Status
 
 # Benefits:
 
-•	Real-Time Updates: Attendance is logged immediately.
-•	Accurate Timestamps: Ensures precise record-keeping.
-•	Simple & Lightweight: Easy to implement and use, ideal for small to medium-sized organizations.
-•	Error Logging: Captures errors for smooth operation.
+1.	Real-Time Updates: Attendance is logged immediately.
+2.	Accurate Timestamps: Ensures precise record-keeping.
+3.	Simple & Lightweight: Easy to implement and use, ideal for small to medium-sized organizations.
+4.	Error Logging: Captures errors for smooth operation.
 
 # Conclusion:
 
