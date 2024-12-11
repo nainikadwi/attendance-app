@@ -54,18 +54,22 @@ This is a simple Attendance Management System built with FastAPI. It allows an a
 •	Add Employee
 
 Form to add a new employee. This requires:
+
 	•	Employee Name: Name of the employee (unique).
+ 
 	•	Admin Password: Password for authentication (default: admin123).
  
 •	Delete Employee
 
 Form to remove an existing employee. This requires:
+
 	•	Employee Name: Name of the employee to delete.
 	•	Admin Password: Password for authentication.
  
 •	Mark Attendance
 
 Form for marking attendance:
+
 	•	Displays a dynamic table with employee names and columns for dates in the current month.
 	•	Checkboxes for today’s date allow marking attendance as “Present.”
 	•	Attendance already marked as “Present” will remain checked on reload.
