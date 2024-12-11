@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        .message {
+            color: green;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attendance Management</h1>
+
+    {% if success_message %}
+    <div class="message">{{ success_message }}</div>
+    {% endif %}
+
+    <!-- Attendance Form -->
+    <h2>Submit Attendance for {{ current_date }}</h2>
+    <form method="post" action="/submit_attendance">
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employees %}
+                <tr>
+                    <td>{{ employee[0] }}</td>
+                    <td>
+                        <select name="attendance_{{ employee[0] }}">
+                            <option value="Present">Present</option>
+                            <option value="Absent">Absent</option>
+                            <option value="Leave">Leave</option>
+                        </select>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit">Submit Attendance</button>
+    </form>
+
+    <!-- Add User Form -->
+    <h2>Add a New User</h2>
+    <form method="post" action="/add_user" enctype="application/x-www-form-urlencoded">
+        <label for="employee_name">Employee Name:</label>
+        <input type="text" id="employee_name" name="employee_name" required>
+        <br><br>
+        <label for="admin_password">Admin Password:</label>
+        <input type="password" id="admin_password" name="admin_password" required>
+        <br><br>
+        <button type="submit">Add User</button>
+    </form>
+
+    <!-- Delete User Form -->
+    <h2>Delete a User</h2>
+    <form method="post" action="/delete_user" enctype="application/x-www-form-urlencoded">
+        <label for="delete_employee_name">Employee Name:</label>
+        <input type="text" id="delete_employee_name" name="employee_name" required>
+        <br><br>
+        <label for="delete_admin_password">Admin Password:</label>
+        <input type="password" id="delete_admin_password" name="admin_password" required>
+        <br><br>
+        <button type="submit">Delete User</button>
+    </form>
+</body>
+</html>
