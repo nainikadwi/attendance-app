@@ -53,7 +53,7 @@ This is a simple Attendance Management System built with FastAPI. It allows an a
 
 •	Add Employee
 
-Form to add a new employee. This requires:
+	Form to add a new employee. This requires:
 
 	•	Employee Name: Name of the employee (unique).
  
@@ -61,14 +61,14 @@ Form to add a new employee. This requires:
  
 •	Delete Employee
 
-Form to remove an existing employee. This requires:
+	Form to remove an existing employee. This requires:
 
 	•	Employee Name: Name of the employee to delete.
 	•	Admin Password: Password for authentication.
  
 •	Mark Attendance
 
-Form for marking attendance:
+	Form for marking attendance requires:
 
 	•	Displays a dynamic table with employee names and columns for dates in the current month.
 	•	Checkboxes for today’s date allow marking attendance as “Present.”
