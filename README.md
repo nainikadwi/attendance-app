@@ -1,8 +1,9 @@
-Attendance Management Application
+# Attendance Management Application
 
 This is a simple Attendance Management System built with FastAPI. It allows an administrator to add or delete employees and manage attendance records dynamically in a CSV file for the current month.
 
-Features
+# Features
+
 	1.	Dynamic Attendance Tracking
 	•	Attendance is recorded and displayed in a table format.
 	•	Pre-checks attendance for the current date if already marked as “Present.”
@@ -14,7 +15,7 @@ Features
 	4.	Responsive Interface
 	•	Clean and styled HTML interface with a responsive design.
 
-How to Run the Application
+# How to Run the Application
 
 Prerequisites
 	•	Python 3.8 or above installed
@@ -46,7 +47,8 @@ uvicorn main:app --reload
 The application will be available at:
 	•	http://127.0.0.1:8000/ (local development)
 
-Application Structure
+# Application Structure
+
 	•	Add Employee
 Form to add a new employee. This requires:
 	•	Employee Name: Name of the employee (unique).
@@ -60,7 +62,7 @@ Form to remove an existing employee. This requires:
 	•	Checkboxes for today’s date allow marking attendance as “Present.”
 	•	Attendance already marked as “Present” will remain checked on reload.
 
-CSV File Structure
+# CSV File Structure
 
 The attendance records are stored in a CSV file located in the attendance_records directory. The file name follows the format attendance_YYYY_MM.csv.
 
@@ -70,7 +72,7 @@ Employee Name	2024-12-01	2024-12-02	2024-12-03	…
 Alice	Present			
 Bob			Present	
 
-Helper Functions
+# Helper Functions
 
 initialize_csv()
 	•	Ensures the CSV file for the current month is created if it doesn’t already exist.
