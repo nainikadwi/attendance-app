@@ -64,6 +64,7 @@ Form to remove an existing employee. This requires:
 	•	Admin Password: Password for authentication.
  
 •	Mark Attendance
+
 Form for marking attendance:
 	•	Displays a dynamic table with employee names and columns for dates in the current month.
 	•	Checkboxes for today’s date allow marking attendance as “Present.”
@@ -76,8 +77,8 @@ The attendance records are stored in a CSV file located in the attendance_record
 	Example CSV File:
 
 	Employee Name	2024-12-01	2024-12-02	2024-12-03	…
-	Alice	Present			
-	Bob	Present	
+	Alice		Present			
+	Bob		Present	
 
 # Helper Functions
 
@@ -94,8 +95,7 @@ The attendance records are stored in a CSV file located in the attendance_record
 # API Endpoints
 
 	GET /
-
-	Renders the attendance management HTML page.
+	•       Renders the attendance management HTML page.
 
 	POST /add_employee
 	•	Parameters:
@@ -117,6 +117,6 @@ The attendance records are stored in a CSV file located in the attendance_record
 	•	Response:
 	•	Updates the attendance record in the CSV file for the current date.
 
-# Default Admin Password : Password: admin123
+# Default Admin Password : admin123
 
-(You can change it by modifying the ADMIN_PASSWORD constant in the code.)
+You can change it by modifying the ADMIN_PASSWORD constant in the code.
