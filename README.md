@@ -15,49 +15,56 @@ This is a simple Attendance Management System built with FastAPI. It allows an a
 	4.	Responsive Interface
 	•	Clean and styled HTML interface with a responsive design.
 
-# How to Run the Application
+# How to Run the Application 
 
-Prerequisites
+	Prerequisites :
+
 	•	Python 3.8 or above installed
 	•	pip (Python package manager)
+	
+	Installation Steps :
 
-Installation Steps
 	1.	Clone the Repository
 
-git clone <repository-url>
-cd attendance-management
+		git clone <repository-url>
+		cd attendance-management
 
 
 	2.	Install Dependencies
-Create a virtual environment (optional but recommended):
+		Create a virtual environment (optional but recommended):
 
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+		python -m venv venv
+		source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-Install required packages:
+	        Install required packages:
 
-pip install fastapi uvicorn
+		pip install fastapi uvicorn
 
 
 	3.	Run the Application
-Start the FastAPI server:
+		Start the FastAPI server:
 
-uvicorn main:app --reload
+		uvicorn main:app --reload
 
-The application will be available at:
+		The application will be available at:
 	•	http://127.0.0.1:8000/ (local development)
 
 # Application Structure
 
-	•	Add Employee
+•	Add Employee
+
 Form to add a new employee. This requires:
 	•	Employee Name: Name of the employee (unique).
 	•	Admin Password: Password for authentication (default: admin123).
-	•	Delete Employee
+ 
+•	Delete Employee
+
 Form to remove an existing employee. This requires:
 	•	Employee Name: Name of the employee to delete.
 	•	Admin Password: Password for authentication.
-	•	Mark Attendance
+ 
+•	Mark Attendance
+Form for marking attendance:
 	•	Displays a dynamic table with employee names and columns for dates in the current month.
 	•	Checkboxes for today’s date allow marking attendance as “Present.”
 	•	Attendance already marked as “Present” will remain checked on reload.
@@ -66,50 +73,50 @@ Form to remove an existing employee. This requires:
 
 The attendance records are stored in a CSV file located in the attendance_records directory. The file name follows the format attendance_YYYY_MM.csv.
 
-Example CSV File:
+	Example CSV File:
 
-Employee Name	2024-12-01	2024-12-02	2024-12-03	…
-Alice	Present			
-Bob			Present	
+	Employee Name	2024-12-01	2024-12-02	2024-12-03	…
+	Alice	Present			
+	Bob	Present	
 
 # Helper Functions
 
-initialize_csv()
+	initialize_csv()
 	•	Ensures the CSV file for the current month is created if it doesn’t already exist.
 	•	Generates headers for all dates in the current month.
 
-get_csv_data()
+	get_csv_data()
 	•	Reads the data from the CSV file and returns it as a list of rows.
 
-write_csv_data(rows)
+	write_csv_data(rows)
 	•	Writes updated rows back into the CSV file.
 
-API Endpoints
+# API Endpoints
 
-GET /
+	GET /
 
-Renders the attendance management HTML page.
+	Renders the attendance management HTML page.
 
-POST /add_employee
+	POST /add_employee
 	•	Parameters:
 	•	employee_name (str): Name of the employee to add.
 	•	admin_password (str): Admin password for authentication.
 	•	Response:
 	•	Adds the employee if the name is unique and password is correct.
 
-POST /delete_employee
+	POST /delete_employee
 	•	Parameters:
 	•	employee_name (str): Name of the employee to delete.
 	•	admin_password (str): Admin password for authentication.
 	•	Response:
 	•	Removes the employee if the name exists and password is correct.
 
-POST /submit_attendance
+	POST /submit_attendance
 	•	Parameters:
 	•	attendance (list[str]): List of employee names marked as “Present.”
 	•	Response:
 	•	Updates the attendance record in the CSV file for the current date.
 
-Default Admin Password
-	•	Password: admin123
+# Default Admin Password : Password: admin123
+
 (You can change it by modifying the ADMIN_PASSWORD constant in the code.)
