@@ -5,15 +5,15 @@ This is a simple Attendance Management System built with FastAPI. It allows an a
 # Features
 
 	1.	Dynamic Attendance Tracking
-	•	Attendance is recorded and displayed in a table format.
-	•	Pre-checks attendance for the current date if already marked as “Present.”
+		•	Attendance is recorded and displayed in a table format.
+		•	Pre-checks attendance for the current date if already marked as “Present.”
 	2.	Add and Delete Employees
-	•	Admins can add or delete employees dynamically through password-protected forms.
+		•	Admins can add or delete employees dynamically through password-protected forms.
 	3.	CSV-based Storage
-	•	Attendance records are saved in a monthly CSV file.
-	•	Automatically initializes the CSV file for the current month with headers for each date.
+		•	Attendance records are saved in a monthly CSV file.
+		•	Automatically initializes the CSV file for the current month with headers for each date.
 	4.	Responsive Interface
-	•	Clean and styled HTML interface with a responsive design.
+		•	Clean and styled HTML interface with a responsive design.
 
 # How to Run the Application 
 
