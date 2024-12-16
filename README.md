@@ -71,6 +71,7 @@ This is a simple Attendance Management System built with FastAPI. It allows an a
 	Form for marking attendance requires:
 
 	•	Displays a dynamic table with employee names and columns for dates in the current month.
+    •	Attendance will be marked in the form of 0 and 1.
 	•	Checkboxes for today’s date allow marking attendance as “Present.”
 	•	Attendance already marked as “Present” will remain checked on reload.
 
@@ -81,8 +82,8 @@ The attendance records are stored in a CSV file located in the attendance_record
 	Example CSV File:
 
 	Employee Name	2024-12-01	2024-12-02	2024-12-03	…
-	Alice		Present			
-	Bob		Present	
+	Alice		    1			
+	Bob		        1
 
 # Helper Functions
 
