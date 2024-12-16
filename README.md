@@ -83,7 +83,7 @@ The attendance records are stored in a CSV file located in the attendance_record
 
 	Employee Name	2024-12-01	2024-12-02	2024-12-03	…
 	Alice		    1			
-	Bob		        1
+	Bob		    1
 
 # Helper Functions
 
